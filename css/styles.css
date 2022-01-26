@@ -80,6 +80,10 @@ img {
 	margin-right: 30px;
 }
 
+.item.thumb {
+	position: absolute;
+}
+
 
 /* ----------header-page---------- */
 
@@ -367,10 +371,41 @@ b {
 
 /* -------------------Busines section------------------- */
 
-.busines {
+.business {
 	padding-top: 0px;
 }
 
+.business-thumb {
+	position: relative;
+}
+
+.description-thumb {
+	
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	bottom: 0;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
+
+	padding: 27px;
+	
+	background: rgba(47, 48, 58, 0.8);
+}
+
+.business-description {
+
+	color: var(--primary-background-color);
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
 /* ----------------------Team---------------------- */
 
 .team {
