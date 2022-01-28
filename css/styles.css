@@ -87,7 +87,7 @@ img {
 	position: relative;
 }
 
-.current::before {
+.current::after {
 
 	position: absolute;
 
@@ -377,18 +377,20 @@ b {
 
 .backdrop {
 	position: fixed;
+	z-index: 1;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 
 	background: rgba(0, 0, 0, 0.2);
+
 }
 
 .modal {
 	position: absolute;
 
-	top: 50%;
+	top:50%;
 	left:50%;
 	transform: translate(-50%, -50%);
 
@@ -449,7 +451,7 @@ b {
 	height: 251px;
 }
 
-/* -------------------Busines section------------------- */
+/* -------------------Business section------------------- */
 
 .business {
 	padding-top: 0px;
@@ -705,27 +707,25 @@ b {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.portfolio-items .link:hover .portfolio-text,
+.portfolio-items .link:focus .portfolio-text {
+	transform: translateY(0);
+	opacity: 1;
+}
+	
 
-.portfolio-thumb:hover::before {
+
+.portfolio-items .link:hover .portfolio-thumb::before,
+.portfolio-items .link:focus .portfolio-thumb::before{
+	transform: translateY(0);
 	opacity: 1;
 }
 
 .portfolio-thumb {
 	display: flex;
 	position: relative;
-}
 
-.portfolio-thumb:before {
-	
-	display: inline-block;
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 100%;
-
-	opacity: 0;
-
-	background-color: rgba(33, 150, 243, 0.9);
+	overflow: hidden;
 }
 
 .portfolio-text {
@@ -733,18 +733,34 @@ b {
 	
 	width: 100%;
 	height: 100%;
+	bottom: 0;
 
 	padding: 63px 24px;
 
 	font-size: 18px;
 	line-height: 1.5;
+
 	opacity: 0;
 
-	color: var(--primary-background-color);	
+	color: var(--primary-background-color);
+	
+	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-text:hover {
-	opacity: 1;
+.portfolio-thumb::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+
+	background-color: rgba(33, 150, 243, 0.9);
+
+	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
