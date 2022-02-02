@@ -182,6 +182,8 @@ img {
 
 	padding-top: 32px;
 	padding-bottom: 28px;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 /* -----Contacts----- */
@@ -201,6 +203,8 @@ img {
 	align-items: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .contact-item {
@@ -316,6 +320,8 @@ b {
 	color: var(--primary-background-color);
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50px;
+
+	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 
@@ -560,6 +566,9 @@ b {
 }
 
 .svg-container {
+	display: flex;
+	align-content: center;
+
 	width: 44px;
 	height: 44px;
 	border-radius: 50px;
@@ -567,15 +576,12 @@ b {
     align-items: center;
     color: var(--icon-color);
     cursor: pointer;
+
+	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .social-icon{
 	fill: currentColor;
-}
-
-.svg-container {
-	display: flex;
-	align-content: center;
 }
 
 .svg-container:hover,
@@ -611,6 +617,8 @@ b {
 	color: var(--icon-color);
 
 	background-color: var(--primary-background-color);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .company-icon{
@@ -728,15 +736,11 @@ b {
 .portfolio-items .link:hover .portfolio-text,
 .portfolio-items .link:focus .portfolio-text {
 	transform: translateY(0);
-	opacity: 1;
 }
 	
-
-
 .portfolio-items .link:hover .portfolio-thumb::before,
 .portfolio-items .link:focus .portfolio-thumb::before{
 	transform: translateY(0);
-	opacity: 1;
 }
 
 .portfolio-thumb {
@@ -758,8 +762,6 @@ b {
 	font-size: 18px;
 	line-height: 1.5;
 
-	opacity: 0;
-
 	color: var(--primary-background-color);
 	
 	transform: translateY(100%);
@@ -773,13 +775,13 @@ b {
 	width: 100%;
 	height: 100%;
 
-	opacity: 0;
-
 	background-color: rgba(33, 150, 243, 0.9);
 
 	transform: translateY(100%);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 
 
